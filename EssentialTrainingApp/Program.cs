@@ -8,9 +8,9 @@ using NLog;
 
 namespace EssentialTrainingApp
 {
-    class Program
-    {
-        class Program
+
+    
+        public class Program
         {
             public static Logger logger = LogManager.GetCurrentClassLogger();
             public static List<string> Words;
@@ -22,7 +22,7 @@ namespace EssentialTrainingApp
                 Words.Add("Milk");
                 Words.Add("Cheese");
 
-                crazyMathProblem();
+            //crazyMathProblem();
                 ReadTextFile();
                 Console.ReadLine();
             }
@@ -48,6 +48,7 @@ namespace EssentialTrainingApp
                 catch(System.IO.FileNotFoundException ex)
                 {
                     Console.WriteLine("could not find the file");
+                    logger.Error(ex.Message);
                 }
                 catch(Exception ex)
                 {
@@ -59,4 +60,4 @@ namespace EssentialTrainingApp
 
 
     }
-}
+
