@@ -4,9 +4,9 @@ namespace EssentialTraining
 {
     public class Class1
     {
-        public object AddTwo(int v1, int v2)
+        public int AddTwo(int a, int b)
         {
-            throw new NotImplementedException();
+            return a + b;
         }
     }
 }
